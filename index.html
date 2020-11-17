@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counselor</title>
+    <!-- google map api -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgqgTJqEeYfMAT96miDD5YWqNiK8KUPNM&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custome css styles -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body onload="initMap()">
+    <header class="container main-section main-section-margin wrap-header">
+      <div class="header-inner">
+        <div class="header-logo">LOGO</div>
+        <div class="header-fb header-item">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="header-location header-item">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="header-phone header-item">
+          <i class="fas fa-phone-alt"></i
+          ><span class="header-phone-number">555-555-5555</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="container main-section main-section-margin wrap-hero">
+      <div class="hero-inner">
+        <img
+          src="./assets/superior_light_house.jpg"
+          alt=""
+          class="hero-img container"
+        />
+
+        <h1 class="hero">Company Name</h1>
+      </div>
+    </section>
+
+    <section class="container main-section main-section-margin wrap-content">
+      <div class="content-inner">
+        <h3 class="content-heading">Welcome Text</h3>
+        <p class="content-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+          asperiores, similique error commodi est corrupti, sit sunt aliquam,
+          reiciendis veniam ab illum quia delectus nam! Impedit reiciendis,
+          aliquid labore quam quae necessitatibus distinctio maxime, doloremque
+          ex sequi voluptate magni expedita corrupti asperiores, porro est
+          officiis? Quidem corporis quam reprehenderit exercitationem.
+        </p>
+      </div>
+    </section>
+
+    <section class="container main-section-margin wrap-services">
+      <div class="services-inner">
+        <div class="service-card">
+          <h4 class="service-heading">service 1</h4>
+          <div class="service-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+        <div class="service-card">
+          <h4 class="service-heading">service 2</h4>
+          <div class="service-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+        <div class="service-card">
+          <h4 class="service-heading">service 3</h4>
+          <div class="service-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container main-section main-section-margin wrap-footer">
+      <div class="footer-inner">
+        <div class="map" id="map"></div>
+        <div class="footer-sub">
+          <div class="footer-sub-item">
+            <div class="footer-phone">
+              <h5>Schedule appointment</h5>
+              <span>555-555-5555</span>
+            </div>
+          </div>
+          <div class="footer-sub-item">
+            Find us on Social Media <i class="fab fa-facebook"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Handle google map -->
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of superior
+        const superior = { lat: 46.7208, lng: -92.1041 };
+        // The map, centered at superior
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: superior,
+        });
+        // The marker, positioned at superior
+        const marker = new google.maps.Marker({
+          position: superior,
+          map: map,
+        });
+      }
+    </script>
+  </body>
+</html>
