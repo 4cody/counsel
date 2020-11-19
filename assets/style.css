@@ -93,7 +93,7 @@ body {
   width: 40%;
   border-radius: 5px;
   background-color: var(--teal);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .content-heading {
