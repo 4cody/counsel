@@ -1,0 +1,25 @@
+:root {
+  --green: #1ac3a6;
+  --blue: #1d6076;
+}
+
+.blue-txt {
+  color: var(--blue);
+}
+
+.gree-txt {
+  color: var(--green);
+}
+
+.blue-background {
+  background-color: var(--blue);
+}
+
+.green-background {
+  background-color: var(--green);
+}
+
+.test {
+  max-width: 70px;
+  max-height: 100%;
+}
